@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueFire from 'vuefire'
 import VueRouter from 'vue-router'
-import App from './App.vue'
 import NProgress from 'nprogress';
+
+import App from './App.vue'
 
 import AddItem from './components/AddItem.vue'
 import EditItem from './components/EditItem.vue'
@@ -37,6 +38,11 @@ const routes = [{
   },
 ];
 
+const router = new VueRouter({
+  mode: 'history',
+  routes: routes
+});
+
 router.beforeResolve((to, from, next) => {
   if (to.name) {
     NProgress.start()
@@ -47,11 +53,6 @@ router.beforeResolve((to, from, next) => {
 router.afterEach(() => {
   NProgress.done()
 })
-
-const router = new VueRouter({
-  mode: 'history',
-  routes: routes
-});
 
 new Vue({
   render: h => h(App),
