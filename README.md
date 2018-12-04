@@ -1,4 +1,5 @@
 # workoutchallenge
+A simple app using firebase to keep track of you and your friends exercise activity.
 
 ## Project setup
 ```
