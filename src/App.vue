@@ -1,37 +1,30 @@
 <template>
-  <div id="app" class="container">
-    <nav class="navbar navbar-expand-sm bg-light">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'Add' }" class="nav-link">Add Item</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'List' }" class="nav-link">All Item</router-link>
-        </li>
-      </ul>
-    </nav>
-    <div class="gap">
+  <div id="app">
+    <Header />
+    <div class="container">
       <router-view></router-view>
     </div>
   </div>
 </template>
 
-<style lang="css">
-  @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-</style>
+<script>
+import firebase from 'firebase'
+import Header from './components/Header.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Header
+  },
+}
+</script>
 
 <style>
   .gap {
     margin-top: 50px;
   }
+  html {
+    height: 100%;
+    width: auto;
+  }
 </style>
-
-<script>
-
-export default {
-  name: 'app'
-}
-</script>
