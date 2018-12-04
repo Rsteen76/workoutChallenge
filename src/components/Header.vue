@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="custom-size" toggleable="md" type="dark" variant="secondary">
+  <b-navbar  toggleable="md" type="dark" variant="secondary">
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
@@ -58,7 +58,6 @@ data () {
   height: 50px;
   margin: 0px;
   padding: 2px;
-  background-color:black;
 }
 .custom-size {
   height: 60px;
